@@ -1,4 +1,4 @@
-/*//(1)if,elseif,else//
+//(1)if,elseif,else//
 
 //(a)Determine if a given number is positive, negative, or zero//
 let num = prompt("Enter a number: ");
@@ -205,7 +205,7 @@ for (let i = 1; i <= 10; i++) {
    console.log(table);
 }
 
-*/
+
 
 
 

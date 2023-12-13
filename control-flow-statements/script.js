@@ -1,6 +1,6 @@
-//(1)if,elseif,else//
+///(1)if,elseif,else//
 
-//(a)Determine if a given number is positive, negative, or zero//
+//1(a)Determine if a given number is positive, negative, or zero//
 let num = prompt("Enter a number: ");
 num = Number.parseInt(num);
 if (num > 0) {
@@ -11,7 +11,7 @@ if (num > 0) {
   console.log("The Number is zero");
 }
 
-//(b)Classify a person's age into categories such as "Child," "Teenager," "Adult," or "Senior.//
+//1(b)Classify a person's age such as "Child," "Teenager," "Adult," or "Senior.//
 
 Let age = prompt("Enter your age: ");
 age = Number.parseInt(age);
@@ -24,12 +24,30 @@ if (age < 13) {
 } else if (age >= 60) {
   console.log("You are a senior");
 } 
+//1(c) Imagine you are tasked with developing a JavaScript program //that assists a movie ticket booking system. Your program needs to //determine customers' ticket prices based on age.//
+
+let age = Number.parseInt(prompt("Enter your customers  age: "));
+
+if(age>=0 && age<=5){
+  console.log('the ticket is free');
+}else if(age>=6 && age<=12){
+  console.log('the ticket price is $8')
+}else if(age>=13 && age<=18){
+  console.log('the ticket price $12')
+}else if (age>=19 && age<=60){
+  console.log('the ticket price $15')
+}else if (age>=61){
+    console.log(' the ticket is free as a senior citizen discount.')
+}else{
+  console.log('invalid age')
+}
+
 
 
 // (2) switch case//
 
 
-//(a)Assigning the day of the week based on a given number (1-7).//
+//2(a)Assigning the day of the week based on a given number (1-7).//
 
 let day = prompt("Enter a number: ");//prompts function return value as string//
 day = Number.parseInt(day);
@@ -61,7 +79,7 @@ switch (day) {
 }
 
 
- //(b)Identifying the type of fruit based on a provided fruit name.//
+ //2(b)Identifying the type of fruit based on a provided fruit name.//
 let fruit = prompt("Enter a fruit name: ");
 switch (fruit) {
   case "Apple" || 'Strawberry' || 'Pineapple':
@@ -76,9 +94,32 @@ switch (fruit) {
   default:
     console.log("Invalid input");
 }
+//2(c)Imagine you're tasked with building a smart home automation //system that controls different appliances(TV, AC, fan, etc..) //based on voice commands. Your JavaScript program needs to interpret voice commands and execute actions accordingly using a switch case. Develop a JavaScript program that takes voice commands and performs specific actions based on the command given.
+ let command = prompt('voice command like lights on,tv on ,tv off,')
+     switch(command){
+       case 'lights on' : 
+         console.log('Turning on lights');
+         break;
+       case 'lights off':
+         console.log('Turning off Lights')
+         break;
+       case 'tv on':
+         console.log("Turning on the Tv");
+         break;
+       case 'tv off':
+         console.log('Turning off the Tv');
+         break;
+       case 'fan on':
+         console.log('Turning on the fan');
+         break;
+       default:
+         console.log('invalid input')
 
 
-// (3) Nested if else Statements//
+     }
+
+
+// (3) Nested if-else Statements//
 //In practice, you should avoid using nested//
 
 //(a)Determine eligibility for voting based on age and citizenship.//
@@ -130,7 +171,7 @@ membershipStatus == "y" ? console.log("You are eligible for a discount") : conso
 
 // (5) while and do while Loops//
 
-//(a)Display numbers from 1 to 10 in reverse order.//
+//5(a)Display numbers from 1 to 10 in reverse order.//
 let i = 10;
 while (i >= 1) {
   console.log(i);
@@ -157,14 +198,24 @@ do{
 }while(i <= num);
 console.log(fact);
 
+//5(b)do while loop to calculate the sum of numbers from 1 to a //given positive integer limit. console the total sum of numbers. //For example if limit value is 10 then the output should be //Expected 55. like (1 + 2 + 3 + ... + 10 = 55)
+
+let givenNum = Number.parseInt(prompt('enter positive number'));
+let i = 1;
+let totalSum=0;
+do{
+  totalSum += i;
+  i++;
+}while(i<=givenNum);
+console.log(totalSum);
+
 // (6)for Loop, break, and continue Statements//
 
-//(a)Find prime numbers within a specified range.
+//6(a)Find prime numbers within a specified range.
 
 // take input from the user
 const number = parseInt(prompt("Enter a positive number: "));
 let isPrime = true;
-
 
 // check if number is equal to 1
 if (number === 1) {
@@ -194,7 +245,7 @@ else {
   console.log("The number is not a prime number.");
 }
 
-//(b)Display the multiplication table of a given number, skipping multiplication by 3//
+//6(b)Display the multiplication table of a given number, skipping multiplication by 3//
 const number = parseInt(prompt("Enter a number: "));
 let table;
 for (let i = 1; i <= 10; i++) {

@@ -16,11 +16,11 @@ console.log(e[0 ],f[0]);//output is undefined and 5//
 
 let groceryList = [  "Basmati Rice","Masoor Dal","Paneer", "Turmeric Powder","Ghee", "Mangoes", "Assam Tea", "Papadums", "Jaggery"];
 
-//groceryList.push('coriander powder',"papad",'chat masala');
-//console.log(groceryList);//push
+groceryList.push('coriander powder',"papad",'chat masala');
+console.log(groceryList);//push
 
-//groceryList.pop();
-//console.log(groceryList);//pop
+groceryList.pop();
+console.log(groceryList);//pop
 
 groceryList.shift();
 console.log(groceryList);//shift=>Removing an element to the beginning of an array
